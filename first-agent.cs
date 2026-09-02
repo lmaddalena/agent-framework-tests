@@ -10,7 +10,7 @@ public static class FirstAgent
 
     public static async Task RunAsync()
     {
-        Console.WriteLine("\nFirst Agent:");
+        Console.WriteLine("First Agent:");
         Console.WriteLine("-------------------------");
 
         string modelId = "llama3.2:latest";

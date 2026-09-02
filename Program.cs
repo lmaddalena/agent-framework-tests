@@ -11,7 +11,7 @@ class Program
             Console.Clear();
             Console.WriteLine("=== MAIN MENU ===");
             Console.WriteLine("1. First Agent");
-            Console.WriteLine("2. TO DO...");
+            Console.WriteLine("2. Agent with tools");
             Console.WriteLine("3. TO DO...");
             Console.WriteLine("4. Exit");
             Console.Write("\nSelect an option (1-4): ");
@@ -24,7 +24,7 @@ class Program
                     await FirstAgent.RunAsync();
                     break;
                 case "2":
-                    Console.WriteLine("\nto do...");
+                    await AgentWithTools.RunAsync();
                     break;
                 case "3":
                     Console.WriteLine("\nto do...");
