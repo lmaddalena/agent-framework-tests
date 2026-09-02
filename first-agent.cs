@@ -20,7 +20,7 @@ public static class FirstAgent
         using ILoggerFactory loggerFactory = LoggerFactory.Create(builder =>
         {
             builder.AddConsole();
-            builder.SetMinimumLevel(LogLevel.Trace);
+            builder.SetMinimumLevel(LogLevel.Error);
         });
 
         // create the logger
@@ -45,5 +45,11 @@ public static class FirstAgent
         Console.WriteLine($"User > {prompt}");
 
         Console.WriteLine($"agent > {await agent.RunAsync(prompt)}");
+
+        //...or streaming response
+        // await foreach (var update in agent.RunStreamingAsync(prompt))
+        // {
+        //     Console.Write(update);
+        // }
     }
 }
