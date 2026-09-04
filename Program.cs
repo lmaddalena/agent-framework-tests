@@ -13,7 +13,8 @@ class Program
             Console.WriteLine("1. First Agent");
             Console.WriteLine("2. Agent with tools");
             Console.WriteLine("3. Session");
-            Console.WriteLine("4. Exit");
+            Console.WriteLine("4. PlugIn");
+            Console.WriteLine("5. Exit");
             Console.Write("\nSelect an option (1-4): ");
 
             string? choice = Console.ReadLine();
@@ -30,6 +31,9 @@ class Program
                     await Session.RunAsync();
                     break;
                 case "4":
+                    await Plugin.RunAsync();
+                    break;
+                case "5":
                     exit = true;
                     Console.WriteLine("\nExiting...");
                     break;
