@@ -14,8 +14,9 @@ class Program
             Console.WriteLine("2. Agent with tools");
             Console.WriteLine("3. Session");
             Console.WriteLine("4. PlugIn");
-            Console.WriteLine("5. Exit");
-            Console.Write("\nSelect an option (1-4): ");
+            Console.WriteLine("5. Memory");
+            Console.WriteLine("6. Exit");
+            Console.Write("\nSelect an option (1-6): ");
 
             string? choice = Console.ReadLine();
 
@@ -34,6 +35,9 @@ class Program
                     await Plugin.RunAsync();
                     break;
                 case "5":
+                    await Memory.RunAsync();
+                    break;
+                case "6":
                     exit = true;
                     Console.WriteLine("\nExiting...");
                     break;
