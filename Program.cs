@@ -15,8 +15,9 @@ class Program
             Console.WriteLine("3. Session");
             Console.WriteLine("4. PlugIn");
             Console.WriteLine("5. Memory");
-            Console.WriteLine("6. Exit");
-            Console.Write("\nSelect an option (1-6): ");
+            Console.WriteLine("6. RAG");
+            Console.WriteLine("7. Exit");
+            Console.Write("\nSelect an option (1-7): ");
 
             string? choice = Console.ReadLine();
 
@@ -38,6 +39,9 @@ class Program
                     await Memory.RunAsync();
                     break;
                 case "6":
+                    await Rag.RunAsync();
+                    break;
+                case "7":
                     exit = true;
                     Console.WriteLine("\nExiting...");
                     break;
